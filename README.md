@@ -69,7 +69,7 @@ skill/evidence-lens/          the Skill: zip this folder and import it (Markdown
   references/                 view registry, integrity checks, source formats, request
                               workflow, lifecycle, messages, validation, worked example
 proposal/                     Round 1 proposal (PDF + Markdown)
-devpost/                      Devpost page text
+devpost/                      Devpost page text and project story
 gallery/                      six 3:2 gallery images (2400×1600)
 tests/
   static-check-result.json    output of the official checker
