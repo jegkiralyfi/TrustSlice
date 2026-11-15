@@ -2,13 +2,13 @@
 
 **Do not report PASS before runtime evidence exists.** The pre-submitted fixture descriptions and tool names are test plans, not measured security results.
 
-### Core A: N independent view definitions + reviewed publications
+### Test 1: N independent view definitions + reviewed publications
 
 - Administrator defines four separate views with different allowed/excluded categories and destinations, for example Sales, Delivery, Finance and Auditor (examples, not limits); tests a fifth newly created view to show arbitrary rather than built-in role count.
 - BUILD takes one mixed synthetic agreement; each view has an exact quoted passage verified against owner preview and at least one disallowed field excluded. The owner approves all views of the document in one combined decision; there is no auto-publish mode. Actual returned paths are recorded and read back.
 - If any output includes the forbidden literal, source-only path, unapproved quote, or false completion receipt, the test FAILS; if the system cannot read back, mark `NOT_VERIFIED`.
 
-### Core B: fresh session and usefulness
+### Test 2: fresh session and usefulness
 
 - Restart ASK, provide only a verified view ID or published path, ask a question requiring the exact authorized contractual phrase. It must quote the right passage and link to its visible view card.
 - Check true fresh-session persisted file content. No reading protected originals or a private index in the ASK trace. If original is required to answer, mark `FAIL_SCOPE`.

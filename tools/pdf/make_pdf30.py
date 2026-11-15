@@ -9,10 +9,12 @@ from reportlab.platypus import (BaseDocTemplate, PageTemplate, Frame, Paragraph,
                                 TableStyle, KeepTogether, NextPageTemplate, PageBreak, Image)
 from reportlab.pdfgen import canvas as rl_canvas
 import content30 as C
+from reportlab import rl_config
 
 F = "/usr/share/fonts/truetype/dejavu/"
 pdfmetrics.registerFont(TTFont("DV", F + "DejaVuSans.ttf"))
 pdfmetrics.registerFont(TTFont("DVB", F + "DejaVuSans-Bold.ttf"))
+rl_config.canvas_basefontname = "DV"   # no unembedded Helvetica in the PDF
 
 NAVY, TEAL, PILL = HexColor("#112636"), HexColor("#31BCA9"), HexColor("#167D84")
 CARD, GREY, INK, RULE = HexColor("#F4F8F8"), HexColor("#7E8C95"), HexColor("#1B2A36"), HexColor("#D9E2E4")
@@ -22,7 +24,7 @@ M = 50                      # side margin
 HERO_H = 205                # navy hero band on page 1
 CARDS_TOP = H - HERO_H - 14
 P2_BAND = 76                # navy band on page 2
-OUT = sys.argv[1] if len(sys.argv) > 1 else "TrustSlice_Round1_Proposal_v030.pdf"
+OUT = sys.argv[1] if len(sys.argv) > 1 else "TrustSlice_Round1_Proposal_v031.pdf"
 
 
 def footer(c, page):
@@ -55,14 +57,18 @@ def card_block(c):
 
 def first_page(c, doc):
     c.saveState()
-    c.setTitle(f"{C.TITLE} — Round 1 Proposal {C.VERSION}")
+    c.setTitle(f"{C.TITLE}: Round 1 Proposal {C.VERSION}")
     c.setAuthor("Zoltán Fehér"); c.setSubject("UGREEN AI NAS Hackathon 2026, Round 1 proposal")
-    c.setKeywords("TrustSlice, UGREEN, UGOS, Uliya, Skill, NAS, knowledge views")
+    c.setKeywords("TrustSlice, UGREEN, UGOS, Uliya, Skill, NAS, team views")
     c.setFillColor(NAVY); c.rect(0, H - HERO_H, W, HERO_H, stroke=0, fill=1)
     c.setFillColor(TEAL); c.rect(0, H - 6, W, 6, stroke=0, fill=1)
     c.roundRect(M, H - 52, 118, 22, 5, stroke=0, fill=1)
     c.setFillColor(NAVY); c.setFont("DVB", 9.5); c.drawString(M + 12, H - 44.5, C.HERO_PILL)
-    c.setFillColor(white); c.setFont("DVB", 24); c.drawString(M, H - 90, C.HERO_H1)
+    from reportlab.pdfbase.pdfmetrics import stringWidth as sw
+    for txt, fn, fs in ((C.HERO_H1, "DVB", 21), (C.HERO_H2, "DVB", 13.5), (C.HERO_FLOW, "DV", 9.6),
+                        (C.HERO_SUB, "DV", 7.6), (C.CARDS_NOTE, "DVB", 6.6), (C.PAGE2_SUB, "DV", 7.8)):
+        assert sw(txt, fn, fs) <= W - 2 * M, f"hero text too wide: {txt}"
+    c.setFillColor(white); c.setFont("DVB", 21); c.drawString(M, H - 90, C.HERO_H1)
     c.setFillColor(MINT); c.setFont("DVB", 13.5); c.drawString(M, H - 116, C.HERO_H2)
     c.setFillColor(HexColor("#DCE6EA")); c.setFont("DV", 9.6); c.drawString(M, H - 144, C.HERO_FLOW)
     c.setFillColor(HexColor("#AFC0C7")); c.setFont("DV", 7.6); c.drawString(M, H - 170, C.HERO_SUB)
@@ -107,7 +113,7 @@ def gate_png(path_pdf, path_png):
     sx = 3 * (bw + gap); ex = 5 * (bw + gap) - gap
     c.setStrokeColor(TEAL); c.setLineWidth(0.8); c.line(sx, 9, ex, 9)
     c.setFillColor(PILL); c.setFont("DV", 5.8)
-    c.drawCentredString((sx + ex) / 2, 1.5, "private: any failed check blocks the copy")
+    c.drawCentredString((sx + ex) / 2, 1.5, "In private staging, any failed check blocks the copy.")
     c.save()
     subprocess.run(["pdftoppm", "-r", "300", "-png", "-singlefile", path_pdf, path_png[:-4]], check=True)
     return gw, gh
@@ -129,13 +135,13 @@ def item(num, title, text, first=False):
         ("BOTTOMPADDING", (0, 0), (-1, -1), 2), ("ROUNDEDCORNERS", [4, 4, 4, 4]),
     ]))
     parts = [] if first else [Spacer(1, 7), Table([[""]], colWidths=[W - 2 * M], rowHeights=[1],
-                                                 style=[("LINEABOVE", (0, 0), (-1, -1), 0.6, RULE)]), Spacer(1, 7)]
+                                                 style=[("LINEABOVE", (0, 0), (-1, -1), 0.6, RULE), ("FONTNAME", (0, 0), (-1, -1), "DV")]), Spacer(1, 7)]
     return KeepTogether(parts + [t, Spacer(1, 5), Paragraph(text, body)])
 
 
 def build():
     doc = BaseDocTemplate(OUT, pagesize=A4, leftMargin=M, rightMargin=M, topMargin=0, bottomMargin=0,
-                          title=f"{C.TITLE} — Round 1 Proposal {C.VERSION}", author="Zoltán Fehér", initialFontName="DV",
+                          title=f"{C.TITLE}: Round 1 Proposal {C.VERSION}", author="Zoltán Fehér", initialFontName="DV",
                           subject="UGREEN AI NAS Hackathon 2026, Round 1 proposal", creator="TrustSlice")
     top1 = CARDS_TOP - 50 - 30
     f1 = Frame(M, 44, W - 2 * M, top1 - 44, id="f1", leftPadding=0, rightPadding=0, topPadding=0, bottomPadding=0)

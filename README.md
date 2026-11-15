@@ -1,8 +1,8 @@
-# TrustSlice – Confidential Knowledge Views
+# TrustSlice – Team Views of Confidential Documents
 
-**Share the know-how. Not the whole document.**
+**Share the know-how, not the whole document.**
 
-TrustSlice is a Markdown-only Uliya Skill for UGREEN AI NAS. It turns one mixed business document (a proposal, an agreement, meeting notes, a report) into owner-approved, word-for-word knowledge views for different teams. A team then asks Uliya questions and gets answers only from the view it can already open, with a citation. The original stays untouched in a protected folder.
+TrustSlice is a Markdown-only Uliya Skill for UGREEN AI NAS. It turns one mixed business document (a proposal, an agreement, meeting notes, a report) into owner-approved, word-for-word views for different teams. A team then asks Uliya questions and gets answers, with a citation, only from the view it can already open. The original stays in a protected folder, and no team gets a copy of it.
 
 Entry for the **UGREEN AI NAS Hackathon 2026**, track *Automate Your Workflow*. This is an independent community project, not an official UGREEN product. The Skill's stable identifier is `evidence-lens`, the project's earlier working name.
 
@@ -29,15 +29,15 @@ NAS folder permissions work per folder and per file. UGOS **Universal Search exc
 
 | Step | Who | What happens |
 |---|---|---|
-| **DEFINE** | Admin | Writes a view card: purpose, audience, included and excluded categories, destination. |
-| **BUILD** | Owner | Selected files only: fingerprint, extract, a second read and a leak probe (flags only). |
-| **REVIEW** | Owner | One combined preview per source document, all views side by side, flagged passages first. |
-| **STAGE** | Skill | Approved text is saved only in a private staging folder. |
-| **VERIFY** | Skill | Full read-back equals the approved text, every approved passage is present, no excluded canary appears, the source is unchanged. |
-| **PUBLISH** | Skill + platform approval | `ug-filesystem cpmv` copies the verified file into the team folder (`type=copy`, `overwrite=false`), then reads it back again. |
-| **ASK** | Team | Answers only from a published view the user can already open; quotes plus the view footer as citation. |
-| **REQUEST** | Team | "That is not in the Sales view." A request card goes to the owner; it never confirms that a hidden value exists. |
-| **REFRESH / RETIRE** | Owner, admin | Changed source → `STALE`, past its date → `VIEW_EXPIRED`; old copies are removed by the administrator. |
+| **DEFINE** | Admin | The administrator writes a view card with the purpose, audience, included and excluded categories and destination. |
+| **BUILD** | Owner | The owner selects files. The Skill fingerprints and extracts them, compares a second extraction and flags passages that could point to an excluded fact; it never removes them on its own. |
+| **REVIEW** | Owner | The owner sees one combined preview per source document, with all views side by side and flagged passages first. |
+| **STAGE** | Skill | The Skill saves the approved text only in a private staging folder. |
+| **VERIFY** | Skill | The Skill checks that the full read-back equals the approved text, every approved passage is present, no forbidden test value (canary) appears and the source is unchanged. |
+| **PUBLISH** | Skill + platform approval | `ug-filesystem cpmv` copies the verified file into the team folder (`type=copy`, `overwrite=false`), and the Skill reads it back again. |
+| **ASK** | Team | Uliya answers only from a published view the user can already open, and it cites the quotes with the view footer. |
+| **REQUEST** | Team | "That is not in the Sales view." A request card goes to the owner, and the reply never confirms that a hidden value exists. |
+| **REFRESH / RETIRE** | Owner, admin | A changed source makes the view `STALE`, and a view past its date becomes `VIEW_EXPIRED`. The administrator removes old copies. |
 
 There is no auto-publish mode and no fallback that writes directly into a team folder. A failed check after the copy is reported as `POSSIBLE_EXPOSURE`, never as safe.
 
@@ -54,7 +54,7 @@ The Skill uses only actions from the official UGREEN Skill Kit capability catalo
 
 The release-gate simulator is an executable model of the Skill's release rules with mocked expert-agent returns. We checked that it is not vacuous: removing any single rule (canary scan, source re-check before copy, no-overwrite check) makes at least one case fail. It does not test Uliya, the expert agents or NAS permissions.
 
-Open questions for real hardware:
+These questions need real hardware:
 
 1. Does `extract` return verbatim text?
 2. Does a delegated read respect the asking user's folder permissions?

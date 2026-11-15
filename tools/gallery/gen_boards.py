@@ -64,8 +64,8 @@ BOARDS["Main"] = ("TrustSlice cover", "dark", f"""
 <div class="bar"></div>
 <div class="kick">UGREEN AI NAS HACKATHON 2026 · AUTOMATE YOUR WORKFLOW</div>
 <div style="margin-top:22px"><span class="pill">TRUSTSLICE</span></div>
-<div style="font-family:Poppins,sans-serif;font-weight:700;font-size:70px;line-height:80px;margin-top:14px">One document.</div>
-<div style="font-family:Poppins,sans-serif;font-weight:600;font-size:30px;line-height:40px">Many purposes. <span style="color:{TEAL}">Only approved know-how.</span></div>
+<div id="hero" style="font-family:Poppins,sans-serif;font-weight:700;font-size:52px;line-height:64px;margin-top:18px;white-space:nowrap">Each team sees only what it needs.</div>
+<div style="font-family:Poppins,sans-serif;font-weight:600;font-size:30px;line-height:40px;margin-top:4px">Share the know-how, <span style="color:{TEAL}">not the whole document.</span></div>
 <svg width="1200" height="800" viewBox="0 0 1200 800" style="position:absolute;left:0;top:0" aria-hidden="true">
   <polygon points="284,452 452,500 452,560 284,610" fill="#9FC4CC" fill-opacity="0.14"/>
   <line x1="290" y1="530" x2="452" y2="530" stroke="#9FC4CC" stroke-width="2" stroke-opacity="0.7"/>
@@ -86,7 +86,7 @@ BOARDS["Main"] = ("TrustSlice cover", "dark", f"""
 </div>
 <div style="position:absolute;left:452px;top:450px;width:160px;height:160px;border:6px solid {TEAL};border-radius:50%;box-sizing:border-box;background:rgba(49,188,169,.08);display:flex;align-items:center;justify-content:center;text-align:center;font-size:16px;line-height:22px;font-weight:600;color:#E8F6F6">owner<br>reviews once</div>
 <div style="position:absolute;left:430px;top:622px;width:204px;text-align:center;font-size:14px;color:#9FC4CC">exact approved words only</div>
-<div style="position:absolute;left:706px;top:330px;width:430px;font-size:12px;font-weight:700;letter-spacing:.1em;color:{MINT}">EXAMPLE VIEWS ONLY · NOT A LIMIT</div>
+<div style="position:absolute;left:706px;top:330px;width:430px;font-size:12px;font-weight:700;letter-spacing:.1em;color:{MINT}">THESE VIEWS ARE EXAMPLES, NOT A LIMIT</div>
 <div class="vcard" style="position:absolute;left:706px;top:360px;width:430px;height:88px">
   <div class="vt">SALES</div>
   <div class="vl">{check()}value proposition, word for word</div>
@@ -103,7 +103,7 @@ BOARDS["Main"] = ("TrustSlice cover", "dark", f"""
   <div class="vl grey">{cross()}sales wording</div>
 </div>
 <div style="position:absolute;left:706px;top:664px;width:430px;height:40px;border:1.5px dashed {TEAL};border-radius:20px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:600;color:#CFE9EA">+ any other view: Legal, HR, Auditor…</div>
-<div style="position:absolute;left:64px;bottom:40px;font-size:17px;color:#C9D6DB">Original untouched → Owner-reviewed knowledge → Team-specific views</div>
+<div style="position:absolute;left:64px;bottom:40px;font-size:17px;color:#C9D6DB">The original stays private → The owner approves parts → Each team gets its own file</div>
 """)
 
 # ------------------------------------------------------------------ 02 Views (matrix)
@@ -142,18 +142,18 @@ st = '<div class="arrow">→</div>'.join(
 BOARDS["Flow"] = ("TrustSlice: how it works", "light", f"""
 <div class="bar"></div>
 <div class="kick">HOW IT WORKS</div>
-<div class="h">Seven steps. The original is never touched.</div>
+<div class="h">The original is never edited or copied to a team.</div>
 <div class="mid"><div style="display:flex;gap:5px">{st}</div>
 <div style="position:relative;height:30px">
   <div style="position:absolute;left:464px;width:286px;top:8px;border-top:2px solid {TEAL}"></div>
-  <div style="position:absolute;left:464px;width:286px;top:12px;text-align:center;font-size:13px;color:{DTEAL}">private: any failed check blocks the copy</div>
+  <div style="position:absolute;left:464px;width:286px;top:12px;text-align:center;font-size:13px;color:{DTEAL}">Any failed check here blocks the copy.</div>
 </div>
 <div style="display:flex;gap:20px;margin-top:14px">
   <div class="card" style="flex:1;padding:18px 22px"><div class="vt">REQUEST</div><div style="font-size:18px;line-height:26px;margin-top:6px">“That is not in the Sales view.” A request card goes to the owner. It never confirms that a hidden value exists.</div></div>
-  <div class="card" style="flex:1;padding:18px 22px"><div class="vt">REFRESH · RETIRE</div><div style="font-size:18px;line-height:26px;margin-top:6px">Changed source → STALE. Past its date → VIEW_EXPIRED. Old copies are removed by the administrator.</div></div>
+  <div class="card" style="flex:1;padding:18px 22px"><div class="vt">REFRESH · RETIRE</div><div style="font-size:18px;line-height:26px;margin-top:6px">A changed source makes the view STALE. A view past its date becomes VIEW_EXPIRED. The administrator removes old copies.</div></div>
 </div>
 <div style="margin-top:20px">
-  <span class="gp">originals never modified</span><span class="gp">no auto-publish</span><span class="gp">chat roles grant nothing</span><span class="gp">no direct write into team folders</span><span class="gp">search exclusion ≠ access control</span>
+  <span class="gp">originals never modified</span><span class="gp">no auto-publish</span><span class="gp">“I am the CFO” in chat grants nothing</span><span class="gp">no direct write into team folders</span><span class="gp">search exclusion ≠ access control</span>
 </div></div>
 <div class="note">Tools are UGREEN expert-agent actions (file-agent, document-agent, knowledge-agent). The Skill itself is Markdown only.</div>
 """)
@@ -162,7 +162,7 @@ BOARDS["Flow"] = ("TrustSlice: how it works", "light", f"""
 checks = ["owner decision matches the current source and view version",
           "full read-back equals the approved text, footer included",
           "every approved passage is present",
-          "no excluded canary, e.g. the client name or the price",
+          "no forbidden value, e.g. the client name or the price",
           "source unchanged right before the copy",
           "team folder exists; no file with the same name"]
 cl = "".join(f'<div class="chk"><span class="y">✓</span><span>{c}</span></div>' for c in checks)
@@ -173,8 +173,8 @@ BOARDS["Checks"] = ("TrustSlice: the release gate", "light", f"""
 <div class="mid"><div style="display:flex;gap:18px;align-items:stretch">
   <div style="width:250px;display:flex;flex-direction:column;gap:14px">
     <div style="font-size:12px;font-weight:700;letter-spacing:.1em;color:{GREY}">BEFORE THE OWNER REVIEW</div>
-    <div class="card" style="padding:14px 16px"><div class="vt">SECOND READ</div><div style="font-size:17px;line-height:24px;margin-top:4px">Extracted ≠ original wording</div><div class="code" style="margin-top:4px">→ FIDELITY_MISMATCH</div></div>
-    <div class="card" style="padding:14px 16px"><div class="vt">LEAK PROBE</div><div style="font-size:17px;line-height:24px;margin-top:4px">“largest night-shift freight depot”</div><div class="code" style="margin-top:4px">→ LEAK_RISK</div></div>
+    <div class="card" style="padding:14px 16px"><div class="vt">SECOND EXTRACTION</div><div style="font-size:17px;line-height:24px;margin-top:4px">Extracted ≠ original wording</div><div class="code" style="margin-top:4px">→ FIDELITY_MISMATCH</div></div>
+    <div class="card" style="padding:14px 16px"><div class="vt">LEAK PROBE</div><div style="font-size:17px;line-height:24px;margin-top:4px">“largest night-shift freight depot” would point to the client.</div><div class="code" style="margin-top:4px">→ LEAK_RISK</div></div>
   </div>
   <div style="flex:1;background:{NAVY};color:#fff;border-radius:14px;padding:20px 24px">
     <div style="font-size:12px;font-weight:700;letter-spacing:.1em;color:{MINT};margin-bottom:12px">PRIVATE STAGING · ALL MUST PASS</div>
@@ -192,18 +192,18 @@ BOARDS["Checks"] = ("TrustSlice: the release gate", "light", f"""
 """)
 
 # ------------------------------------------------------------------ 05 Compare
-comp = [("Folder permissions", "Show the whole file, or none of it."),
-        ("Universal Search excluded paths", "Hide folders from search; they do not control access."),
-        ("AI chat over all files", "Can quote anything it is able to read."),
-        ("AI summary", "Rewrites the very words you wanted to reuse."),
-        ("Redaction", "Hides the details, and the know-how with them.")]
+comp = [("Folder permissions", "They show the whole file or nothing."),
+        ("Universal Search excluded paths", "They hide folders from search but do not control access."),
+        ("AI chat over all files", "It can quote anything it is able to read."),
+        ("AI summary", "It rewrites the very words you wanted to reuse."),
+        ("Redaction", "It hides the details, and the know-how with them.")]
 cr = "".join(f'<div class="row"><b>{a}</b><span>{b}</span></div>' for a, b in comp)
 BOARDS["Compare"] = ("TrustSlice: why not just use the usual tools", "light", f"""
 <div class="bar"></div>
 <div class="kick">WHY NOT JUST…</div>
 <div class="h">The usual tools see whole files.</div>
 <div class="mid"><div>{cr}
-<div class="row me"><b>TrustSlice</b><span>Exact owner-approved passages per view, checked before any copy.</span></div></div></div>
+<div class="row me"><b>TrustSlice</b><span>It publishes only owner-approved passages, after checking them.</span></div></div></div>
 <div class="note">TrustSlice builds on NAS folder permissions; it does not replace them.</div>
 """)
 
@@ -213,7 +213,7 @@ def li(items, color):
 BOARDS["Status"] = ("TrustSlice: status", "dark", f"""
 <div class="bar"></div>
 <div class="kick">STATUS · 15 NOV 2026</div>
-<div class="h">Verified today. Proven on the NAS day.</div>
+<div class="h">We verified this today. The NAS tests come next.</div>
 <div class="mid"><div style="display:flex;gap:20px">
   <div style="flex:1;background:rgba(255,255,255,.06);border-radius:14px;padding:20px 22px">
     <div style="font-size:13px;font-weight:700;letter-spacing:.1em;color:{TEAL};margin-bottom:12px">VERIFIED NOW</div>
@@ -221,14 +221,14 @@ BOARDS["Status"] = ("TrustSlice: status", "dark", f"""
   </div>
   <div style="flex:1;background:rgba(255,255,255,.06);border-radius:14px;padding:20px 22px">
     <div style="font-size:13px;font-weight:700;letter-spacing:.1em;color:#F0B44C;margin-bottom:12px">ON THE FINALIST NAS</div>
-    {li(["Staged file read back and canary-scanned before any copy", "A fresh session quotes the approved view exactly", "A forged approval or a hidden-client query releases nothing", "NAS permission denial logged apart from AI refusal", "Approval prompts per document counted"], "#F0B44C")}
+    {li(["Staged file read back and canary-scanned before any copy", "A fresh chat quotes the approved view exactly", "A forged approval or a question about the hidden client releases nothing", "NAS permission denial logged apart from AI refusal", "Approval prompts per document counted"], "#F0B44C")}
   </div>
   <div style="width:250px;background:rgba(255,255,255,.06);border-radius:14px;padding:20px 22px">
     <div style="font-size:13px;font-weight:700;letter-spacing:.1em;color:#9FC4CC;margin-bottom:12px">NOT IN THIS ENTRY</div>
-    {li(["Spreadsheet, slide and database adapters", "Platform-wide enforcement", "A real NAS run (not claimed)"], "#9FC4CC")}
+    {li(["Spreadsheet, slide and database adapters", "Stopping other Skills from reading originals", "A real NAS run (not claimed)"], "#9FC4CC")}
   </div>
 </div></div>
-<div class="note">A reviewed publishing workflow on top of UGREEN NAS permissions, not a replacement for them.</div>
+<div class="note">TrustSlice adds a reviewed publishing workflow on top of UGREEN NAS permissions; it does not replace them.</div>
 """)
 
 FONT_LINK = '<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Poppins:wght@500;600;700&amp;display=swap" rel="stylesheet">'

@@ -1,6 +1,6 @@
 # TrustSlice: arbitrary-count view registry and owner verification
 
-**Core rule:** views are records, not hard-coded departments. A business administrator can create **any practical number** of named view definitions; processing them is sequential or batched over actual records, never restricted to `Sales`, `Delivery`, `Finance` or any other fixed list. The environment's file-count, disk space, write approval and time constraints still apply.
+**Core rule:** views are records, not hard-coded departments. A business administrator can create **any number** of named view definitions; processing them is sequential or batched over actual records, never restricted to `Sales`, `Delivery`, `Finance` or any other fixed list. The environment's file-count, disk space, write approval and time constraints still apply.
 
 ## View definition card (Markdown data example)
 

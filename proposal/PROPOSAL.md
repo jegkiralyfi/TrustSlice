@@ -1,8 +1,8 @@
-# TrustSlice – Confidential Knowledge Views · Round 1 Proposal (v0.30)
+# TrustSlice – Team Views of Confidential Documents · Round 1 Proposal (v0.31)
 
-**One document. Many purposes. Only approved know-how.**
+**Each team sees only what it needs.** Share the know-how, not the whole document.
 
-Original untouched → Owner-reviewed knowledge → Team-specific views
+The original stays private → The owner approves parts → Each team gets its own file
 
 | Example view | Sees | Held back |
 |---|---|---|
@@ -11,27 +11,27 @@ Original untouched → Owner-reviewed knowledge → Team-specific views
 | Finance | Fee and payment terms | Sales wording excluded |
 | + Any other view | e.g. Legal, HR, Auditor | Any number of views |
 
-*Example views only, not a limit. Sources: proposals, meeting notes, agreements, reports.*
+*These views are examples, not a limit. Sources can be proposals, meeting notes, agreements or reports.*
 
 ## 01 · What does the Skill do?
 
-TrustSlice turns selected, supported business documents into any number of administrator-defined, owner-approved knowledge views, then answers questions using exact published passages.
+The owner decides which parts of a confidential document each team may use. TrustSlice publishes those parts word for word, one file per team, and answers questions only from them.
 
 ## 02 · Target user and problem
 
-Confidentiality-conscious consultancies, agencies and professional-service teams reuse proposals, contracts, meeting minutes and project reports. For example, Sales needs winning arguments, Delivery needs commitments and Finance needs costs. Folder permissions expose or hide whole files, yet each team needs different information. Manual sanitized copies consume time and quickly become stale.
+Consultancies, agencies and professional-service firms reuse proposals, contracts, minutes and reports that hold confidential client details. For example, Sales needs winning arguments, Delivery needs commitments and Finance needs costs. Folder permissions show or hide whole files. Hand-made sanitized copies take time and soon go out of date.
 
 ## 03 · Proposed solution
 
-Leave originals unchanged in protected NAS folders. Mine source-linked passages into a separate private review area. Administrators configure each view's purpose, audience, inclusion/exclusion rules and destination. The owner reviews all proposed views for a source together and approves exact text. Mixed, uncertain or unverifiable content is withheld; no silent paraphrasing.
+Originals stay unchanged in protected NAS folders. The Skill extracts source-linked passages into a private review area. Administrators define each view's purpose, audience, rules and destination. The owner reviews all views for one source together and approves exact text. Uncertain or mixed passages are held back, never paraphrased.
 
 ## 04 · Core user flow
 
-DEFINE views → BUILD from selected files → REVIEW once per source → STAGE privately → VERIFY exact approved content and excluded canaries → PUBLISH to existing audience folders → ASK from accessible views. REQUEST absent information without revealing whether hidden facts exist. REFRESH flags changed sources; RETIRE needs administrator action.
+DEFINE views → BUILD from selected files → REVIEW once per source → STAGE privately → VERIFY wording and forbidden values → PUBLISH to team folders → ASK from accessible views. REQUEST never reveals whether a hidden fact exists. REFRESH flags changed sources; RETIRE needs an administrator.
 
 ## 05 · Difference from existing tools and conventional AI
 
-TrustSlice keeps original evidence separate from reusable knowledge. Search exposes files, summaries alter wording, and blanket redaction destroys value. Here, owner-approved, source-traceable passages are published in purpose-bound files. Lower exposure comes from reducing released information, not asking an AI to conceal text it already read.
+TrustSlice keeps the original apart from the passages teams reuse. Search exposes files, summaries alter wording and redaction destroys value. Here, the owner approves source-traceable passages, published in one file per team. Exposure falls because less is released, not because an AI hides text it already read.
 
 ## 06 · UGREEN AI NAS capabilities, by step
 
@@ -39,28 +39,28 @@ DISCOVER: file-agent ug-filesystem find, sha256sum. EXTRACT and second read: doc
 
 ## 07 · Technical approach
 
-Markdown-only Skill: the parent only delegates to registered expert agents; no executable or external API. Inputs: view cards, selected files, the owner's decision and pre-existing ACL-protected folders. Private staging must pass owner approval, full read-back, source/policy version and canary checks before any audience copy; missing proof blocks publication. Models: those the administrator authorized in Uliya; data stays on the NAS. Chat role claims grant no access.
+The Skill is Markdown only; it delegates to expert agents and adds no executable or external API. Inputs are view cards, selected files, the owner's decision and existing ACL-protected folders. A staged file must pass approval, full read-back, version and forbidden-value checks before any copy; missing proof blocks publication. Uliya uses only administrator-authorized models; data stays on the NAS. "I am the CFO" in chat grants no access.
 
 ## 08 · Current development status
 
-Implemented: the Markdown Skill, passing UGREEN's official static checker with zero errors and warnings. A separate deterministic release-gate simulation passed 23/23 mocked cases; synthetic fixture checks passed 4/4. Not implemented: spreadsheet, slide and database adapters. Pending NAS validation: all runtime, ACL, indexing and extraction-fidelity results.
+The Markdown Skill is complete and passes UGREEN's official static checker with zero errors and warnings. An offline release-gate simulation passed 23/23 mocked cases; synthetic fixture checks passed 4/4. Spreadsheet, slide and database adapters are not built. Runtime, ACL, indexing and extraction-fidelity results still need the NAS.
 
 ## 09 · Final validation plan
 
-Core A: publish four approved views from one mixed source and add a fifth without changing the Skill. Core B: fresh-session ASK quotes only authorized text. Edge: forged approval, excluded canaries and stale versions block release. Test NAS access denial separately from AI refusal. Validate other document formats before claiming support.
+Test 1 publishes four approved views from one mixed source, then adds a fifth without changing the Skill. Test 2 checks that a fresh chat quotes only approved text. Forged approvals, forbidden values and outdated sources must block release. We test NAS access denial separately from AI refusal.
 
 ## 10 · Known limitations, risks and dependencies
 
-This is reviewed knowledge publishing, not cross-Skill semantic ACL enforcement. Extraction and inference checks may miss leakage; published text can imply hidden facts. One release can trigger several platform approval prompts. Dependencies: UGOS expert-agent behaviour, NAS ACLs, search indexing and Uliya model quality. Future UGOS policy hooks could strengthen enforcement; exposure monitoring and database integration are outside this entry.
+TrustSlice controls publishing; it does not stop other Uliya Skills from reading originals. Extraction and inference checks may miss leakage, and published text can imply hidden facts. One release can trigger several approval prompts. It depends on UGOS expert agents, NAS ACLs, search indexing and Uliya model quality. Exposure monitoring and database integration are outside this entry.
 
 ## Release gate
 
 DEFINE (admin) → BUILD (extract) → REVIEW (owner, once) → STAGE (private) → VERIFY (full check) → PUBLISH (approved copy) → ASK (view only)
 
-STAGE and VERIFY are private: any failed check blocks the copy.
+In private staging (STAGE and VERIFY), any failed check blocks the copy.
 
 ## Components and data flow
 
 No third-party component, library or service is bundled; no licences apply. The Skill uses UGREEN's registered expert agents and the Uliya models the NAS administrator has authorized; it adds no external data flow. All examples and test data are synthetic.
 
-*Ten responses: 488 words (limit 500).*
+*The ten responses contain 490 words (the limit is 500).*

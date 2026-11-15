@@ -30,7 +30,7 @@
     },
     {
       "path": "references/source-formats.md",
-      "sha256": "8ce35ebe6151cf180237de5b8315eefa9b105cd78fdccd2b064626b57b560426"
+      "sha256": "76ca10643fa99b66fbc11d4184052d40aced88ed826d6f36b61dfe05961f7a34"
     },
     {
       "path": "references/user-messages.md",
@@ -38,11 +38,11 @@
     },
     {
       "path": "references/validation.md",
-      "sha256": "5b0ba7f90872be944b5e4b205b08a40bcc0379076d9ed22655c38ab2213e23a0"
+      "sha256": "d3912bf0ad655fd09c6c56cd16847ee80481f41bdd62c19ec1782a67054c07e9"
     },
     {
       "path": "references/view-registry.md",
-      "sha256": "b960ff27aca677926a44fe4937306516d92dee024ca4b9a78b4a9ada4caffcb2"
+      "sha256": "b58c9c78fca0e57f5acf78d8752346eef46d8f1f52577de3b9db6840a195ca96"
     },
     {
       "path": "references/worked-example.md",
@@ -50,7 +50,7 @@
     },
     {
       "path": "SKILL.md",
-      "sha256": "4ee83df950ad2690b2a03a358ac79a25927c649998a2d10c8969e382ee66a7d9"
+      "sha256": "f2dc4d47e580309fce4d465fa7581a6f8ab4da6e06902cb096f7a86c2e1b85a7"
     }
   ],
   "summary": {

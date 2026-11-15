@@ -3,9 +3,9 @@ name: evidence-lens
 description: Turns selected text-extractable business documents (for example proposals, minutes, reports and contracts) on the NAS into owner-controlled, word-for-word views for each role, then answers questions only from an approved view. Use when an admin wants to define a view, when a document owner wants to review and publish views from selected files, or when a team member asks a question that must be answered only from a named approved view, or asks for information their view does not contain. Example views such as Sales, Delivery and Finance are illustrations, not limits; any number of views can be defined.
 ---
 
-# TrustSlice – Confidential Knowledge Views
+# TrustSlice – Team Views of Confidential Documents
 
-*Public marketing title: TrustSlice – Confidential Knowledge Views; stable Skill identifier: `evidence-lens`.*
+*Display name: TrustSlice – Team Views of Confidential Documents. The stable Skill identifier is `evidence-lens`.*
 
 ## When to use
 
@@ -20,7 +20,7 @@ description: Turns selected text-extractable business documents (for example pro
 
 # Goal
 
-Turn selected original NAS documents into durable, owner-controlled, purpose-specific knowledge views that keep exact approved passages and exclude other content from **published output files**. The Skill provides `DEFINE`, `BUILD`, `ASK`, `REQUEST`, `REFRESH`, `LIST`, and `REVISE/RETIRE` workflows. The administrator can define **any number of named views** as separate records, subject to NAS storage, expert-tool limits and human approval capacity. Sales, Delivery and Finance are illustrative examples, never a hard-coded or limited role list.
+Turn selected original NAS documents into durable, owner-controlled, purpose-specific views that keep exact approved passages and exclude other content from **published output files**. The Skill provides `DEFINE`, `BUILD`, `ASK`, `REQUEST`, `REFRESH`, `LIST`, and `REVISE/RETIRE` workflows. The administrator can define **any number of named views** as separate records, subject to NAS storage, expert-tool limits and human approval capacity. Sales, Delivery and Finance are illustrative examples, never a hard-coded or limited role list.
 
 ### Source formats and verifiability
 

@@ -1,4 +1,4 @@
-# Source formats and compatibility boundaries (TrustSlice v0.30)
+# Source formats and compatibility boundaries (TrustSlice v0.31)
 
 Scope is **business-document content**, not a promise of universal file-format parsing. A readable file in UGOS Online Office does not establish complete source extraction or audit-grade fidelity through Uliya experts.
 
