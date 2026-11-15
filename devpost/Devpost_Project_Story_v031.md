@@ -83,10 +83,25 @@ The Skill bundles no third-party component, library or service. It uses UGREEN's
 - We will test real NAS accounts, a forged "CFO approved" line inside a document and unauthorized questions. We will show whether each refusal came from NAS permissions or only from the AI.
 - We will check whether the platform approvals for one release can be batched.
 
-**Our vision goes beyond documents and beyond the office.** None of the following is part of this entry, and each step will need its own tests first.
+# Our vision goes beyond documents and beyond the office.
 
-- **Tables can get views too.** The same owner-approved principle can work on spreadsheets, CSV files and other tables. For example, Sales could get the price list without the margin column, and Finance could get totals without client names. This needs cell, sheet and formula provenance and careful handling of hidden sheets.
-- **Slides can be shared slide by slide.** A team could receive the approved slides of a deck, while speaker notes stay private unless the owner approves them.
-- **Databases can feed views.** ERP and CRM records could flow into approved views through authenticated, read-only connectors with permission checks at query time.
-- **The same principle works at home.** Many NAS units serve families, not only firms. For example, a household could give its tax adviser only the income and deduction passages of its documents, or give a babysitter the emergency contacts and allergies from the household sheet without the alarm code or the bank details.
-- **The platform could enforce it.** If UGREEN lets a Skill confirm who the user is and filter search by permission before Uliya reads a file, approved views could become enforced access control across the NAS. Continuous monitoring of information exposure could follow as a separate product.
+None of the following is part of this entry. Each step will need its own development and validation.
+
+- **Tables can get views too.** The same owner-approved principle can work on spreadsheets, CSV files and other tables. Sales could see product prices without profit margins, while Finance could access approved totals without client identities. Large datasets should use column-, row- and query-level restrictions instead of creating multiple full copies. This requires reliable handling of formulas, hidden sheets and data provenance.
+
+- **Slides can be shared slide by slide.** A team could receive only the approved slides from a presentation, while confidential slides and speaker notes remain private.
+
+- **Databases need controlled queries, not copies.** ERP and CRM systems could provide approved answers through authenticated, read-only connectors. Permissions would be checked when a query runs, including which rows, columns and calculations are allowed. Preventing sensitive inferences from combined queries would require additional safeguards.
+
+- **The same principle works at home.** Many NAS devices serve families rather than businesses. A household could share selected financial information with a tax adviser, or give a babysitter emergency contacts and allergy instructions without exposing bank details, private photographs or other unrelated information.
+
+- **A family NAS should protect personal privacy, not become a surveillance tool.** A shared NAS may contain phone backups, private photographs, home-camera recordings and years of personal history. Being a spouse, parent or NAS administrator should not automatically authorize someone to ask an AI what another family member did all day, reconstruct their movements or search their private memories. Access to stored files should not automatically mean permission to draw and disclose personal conclusions from them.
+
+- **Privacy changes over time.** A childhood bath photograph may become an adult's deeply private image years later. Photos from a previous relationship may deserve different treatment after a separation. A camera recording that was harmless when captured may be embarrassing or intimate in a different context. Future systems should let people review and change who may use personal information, for what purpose and for how long—not assume that permission lasts forever.
+
+- **Privacy preferences should be personal.** Family members could define their own boundaries through guided questions, without having to explain every sensitive reason to the household administrator. When a request crosses those boundaries, the AI could decline or ask the appropriate person for permission, without revealing the private information or even confirming that it exists.
+
+- **The platform could enforce these boundaries.** With authenticated identities, mandatory permission checks before retrieval, protected indexing, consent management and auditable access decisions, UGREEN could eventually extend this principle across NAS applications and AI agents. Continuous monitoring for unintended information exposure—not monitoring people's private lives—could become a separate product.
+
+**The long-term goal is simple: make stored knowledge useful without turning access to a shared device into access to everyone's private life.**
+
