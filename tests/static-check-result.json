@@ -1,0 +1,62 @@
+{
+  "checkFormatVersion": "2.0.0",
+  "status": "static-pass",
+  "target": {
+    "skillName": "evidence-lens"
+  },
+  "catalog": {
+    "checkedVersion": "2.0.0"
+  },
+  "files": [
+    {
+      "path": "references/architecture-contract.md",
+      "sha256": "8545e55c942db16258cf2aa1df8ed724ab02654b036f9f2267b0cec2acfb31a3"
+    },
+    {
+      "path": "references/integrity-checks.md",
+      "sha256": "729b1f202809c37236f354390f51011d4b38fb95784301951e105f12212465e5"
+    },
+    {
+      "path": "references/lifecycle.md",
+      "sha256": "8a9a78d9473a4bf37462b90bc53cbaf24be65a85274564045e65d506acb41f9c"
+    },
+    {
+      "path": "references/request-workflow.md",
+      "sha256": "ca0244a49fcd49a1face06d499471526d282a3d8aca9c54333c6942fd96a3037"
+    },
+    {
+      "path": "references/round2-validation.md",
+      "sha256": "4d060888f58968d1a6fe5657ab277a6440f75520a87983d3c67e765bd3487fde"
+    },
+    {
+      "path": "references/source-formats.md",
+      "sha256": "8ce35ebe6151cf180237de5b8315eefa9b105cd78fdccd2b064626b57b560426"
+    },
+    {
+      "path": "references/user-messages.md",
+      "sha256": "d1005f8016f290420dfb16630204306a7f1b87174beff90630617d22ec1772a1"
+    },
+    {
+      "path": "references/validation.md",
+      "sha256": "5b0ba7f90872be944b5e4b205b08a40bcc0379076d9ed22655c38ab2213e23a0"
+    },
+    {
+      "path": "references/view-registry.md",
+      "sha256": "b960ff27aca677926a44fe4937306516d92dee024ca4b9a78b4a9ada4caffcb2"
+    },
+    {
+      "path": "references/worked-example.md",
+      "sha256": "a755560362c11292cb964da6f96f5709ce5c39528dc0399a547036bc91da7dae"
+    },
+    {
+      "path": "SKILL.md",
+      "sha256": "4ee83df950ad2690b2a03a358ac79a25927c649998a2d10c8969e382ee66a7d9"
+    }
+  ],
+  "summary": {
+    "errors": 0,
+    "warnings": 0,
+    "info": 0
+  },
+  "diagnostics": []
+}

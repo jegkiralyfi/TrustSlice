@@ -1,0 +1,7 @@
+FIKTÍV SZÁMLÁZÁSI ADATLAP — SZINTETIKUS
+Ügyirat: CASE-042
+Számlázandó ügyfél: Zöldsziget Kísérleti Zrt. (kitalált)
+Számlaazonosító: INV-F-042
+Számlaalap: 6 270 000 Ft + ÁFA.
+Fizetési határidő: 2026-12-05.
+Számla állapota: Kiállításra vár.

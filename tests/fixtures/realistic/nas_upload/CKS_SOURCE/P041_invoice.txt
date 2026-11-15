@@ -1,0 +1,8 @@
+FIKTÍV SZÁMLÁZÁSI ADATLAP — SZINTETIKUS
+Ügyirat: CASE-041
+Számlázandó ügyfél: Mesevár Gyártómű Kft. (kitalált)
+Számlaazonosító: INV-F-041
+Számlaalap: 9 840 000 Ft + ÁFA.
+Fizetési határidő: 2026-12-20.
+Teljesítésigazolás hivatkozása: ACC-041.
+Számlatétel megnevezése: Vezetői szolgáltatás. Szolgáltatási leírás a belső ajánlatban, amelynek tartalma a pénzügy számára nem szükséges.

@@ -1,0 +1,16 @@
+{
+  "W_RED": {
+    "customer": "FIKTIV_NORTHLIGHT_LABS",
+    "price": "18 740 125 Ft",
+    "code": "SECRET_RED_9X3Q",
+    "contact": "Teszt Anna",
+    "pay": "11 nap"
+  },
+  "W_BLUE": {
+    "customer": "FIKTIV_SOUTHBRIDGE_PARTNERS",
+    "price": "29 560 801 Ft",
+    "code": "SECRET_BLUE_4K8M",
+    "contact": "Teszt Béla",
+    "pay": "43 nap"
+  }
+}

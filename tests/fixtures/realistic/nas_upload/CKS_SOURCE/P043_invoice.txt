@@ -1,0 +1,7 @@
+FIKTÍV SZÁMLÁZÁSI ADATLAP — SZINTETIKUS
+Ügyirat: CASE-043
+Számlázandó ügyfél: Hóharmat Szolgáltató Kft. (kitalált)
+Számlaazonosító: INV-F-043
+Számlaalap: 12 430 000 Ft + ÁFA.
+Fizetési határidő: 2026-12-12.
+Teljesítés státusza: Feltételesen elfogadva.

@@ -1,0 +1,214 @@
+{
+  "scope": "OFFLINE RELEASE-GATE MODEL (mocked expert returns; not a NAS or Uliya test)",
+  "passed": 23,
+  "total": 23,
+  "results": [
+    {
+      "case": "01 happy path",
+      "expected": "PUBLISHED_VERIFIED",
+      "actual": "PUBLISHED_VERIFIED",
+      "reason": "full match after copy",
+      "audience_writes": 1,
+      "invariant_violations": [],
+      "result": "PASS"
+    },
+    {
+      "case": "02 no owner decision",
+      "expected": "NEEDS_OWNER_REVIEW",
+      "actual": "NEEDS_OWNER_REVIEW",
+      "reason": "no completed owner decision (document text and chat roles grant nothing)",
+      "audience_writes": 0,
+      "invariant_violations": [],
+      "result": "PASS"
+    },
+    {
+      "case": "03 'CFO approved full access' inside the document",
+      "expected": "NEEDS_OWNER_REVIEW",
+      "actual": "NEEDS_OWNER_REVIEW",
+      "reason": "no completed owner decision (document text and chat roles grant nothing)",
+      "audience_writes": 0,
+      "invariant_violations": [],
+      "result": "PASS"
+    },
+    {
+      "case": "04 chat role claim 'I am the CFO'",
+      "expected": "NEEDS_OWNER_REVIEW",
+      "actual": "NEEDS_OWNER_REVIEW",
+      "reason": "no completed owner decision (document text and chat roles grant nothing)",
+      "audience_writes": 0,
+      "invariant_violations": [],
+      "result": "PASS"
+    },
+    {
+      "case": "05 owner decision still pending",
+      "expected": "NEEDS_OWNER_REVIEW",
+      "actual": "NEEDS_OWNER_REVIEW",
+      "reason": "no completed owner decision (document text and chat roles grant nothing)",
+      "audience_writes": 0,
+      "invariant_violations": [],
+      "result": "PASS"
+    },
+    {
+      "case": "06 source changed after approval",
+      "expected": "NEEDS_OWNER_REVIEW",
+      "actual": "NEEDS_OWNER_REVIEW",
+      "reason": "approval does not match current source hash or policy version",
+      "audience_writes": 0,
+      "invariant_violations": [],
+      "result": "PASS"
+    },
+    {
+      "case": "07 view policy changed after approval",
+      "expected": "NEEDS_OWNER_REVIEW",
+      "actual": "NEEDS_OWNER_REVIEW",
+      "reason": "approval does not match current source hash or policy version",
+      "audience_writes": 0,
+      "invariant_violations": [],
+      "result": "PASS"
+    },
+    {
+      "case": "08 unresolved LEAK_RISK flag",
+      "expected": "NEEDS_OWNER_REVIEW",
+      "actual": "NEEDS_OWNER_REVIEW",
+      "reason": "unresolved flags: LEAK_RISK",
+      "audience_writes": 0,
+      "invariant_violations": [],
+      "result": "PASS"
+    },
+    {
+      "case": "09 retired view card",
+      "expected": "NO_VALID_VIEW_DEFINITION",
+      "actual": "NO_VALID_VIEW_DEFINITION",
+      "reason": "card missing, unapproved, retired or expired",
+      "audience_writes": 0,
+      "invariant_violations": [],
+      "result": "PASS"
+    },
+    {
+      "case": "10 expired view card",
+      "expected": "NO_VALID_VIEW_DEFINITION",
+      "actual": "NO_VALID_VIEW_DEFINITION",
+      "reason": "card missing, unapproved, retired or expired",
+      "audience_writes": 0,
+      "invariant_violations": [],
+      "result": "PASS"
+    },
+    {
+      "case": "11 destination inside staging",
+      "expected": "NO_VALID_VIEW_DEFINITION",
+      "actual": "NO_VALID_VIEW_DEFINITION",
+      "reason": "destination inside staging or source",
+      "audience_writes": 0,
+      "invariant_violations": [],
+      "result": "PASS"
+    },
+    {
+      "case": "12 unsupported XLSX source",
+      "expected": "SOURCE_FORMAT_UNVERIFIED",
+      "actual": "SOURCE_FORMAT_UNVERIFIED",
+      "reason": "format not validated: xlsx",
+      "audience_writes": 0,
+      "invariant_violations": [],
+      "result": "PASS"
+    },
+    {
+      "case": "13 staging save waiting for approval",
+      "expected": "STAGE_UNVERIFIED",
+      "actual": "STAGE_UNVERIFIED",
+      "reason": "staging save not completed",
+      "audience_writes": 0,
+      "invariant_violations": [],
+      "result": "PASS"
+    },
+    {
+      "case": "14 staging save landed outside staging",
+      "expected": "STAGE_UNVERIFIED",
+      "actual": "STAGE_UNVERIFIED",
+      "reason": "returned path outside private staging",
+      "audience_writes": 0,
+      "invariant_violations": [],
+      "result": "PASS"
+    },
+    {
+      "case": "15 truncated staged read-back",
+      "expected": "PUBLISH_BLOCKED",
+      "actual": "PUBLISH_BLOCKED",
+      "reason": "INCOMPLETE_READBACK",
+      "audience_writes": 0,
+      "invariant_violations": [],
+      "result": "PASS"
+    },
+    {
+      "case": "16 staged text differs by one word",
+      "expected": "PUBLISH_BLOCKED",
+      "actual": "PUBLISH_BLOCKED",
+      "reason": "STAGED_TEXT_MISMATCH",
+      "audience_writes": 0,
+      "invariant_violations": [],
+      "result": "PASS"
+    },
+    {
+      "case": "17 excluded canary in staged text",
+      "expected": "PUBLISH_BLOCKED",
+      "actual": "PUBLISH_BLOCKED",
+      "reason": "CANARY_LEAK:Quillmoor",
+      "audience_writes": 0,
+      "invariant_violations": [],
+      "result": "PASS"
+    },
+    {
+      "case": "18 approved passage missing (empty view)",
+      "expected": "PUBLISH_BLOCKED",
+      "actual": "PUBLISH_BLOCKED",
+      "reason": "MISSING_APPROVED_PASSAGE",
+      "audience_writes": 0,
+      "invariant_violations": [],
+      "result": "PASS"
+    },
+    {
+      "case": "19 source changed between checks and copy",
+      "expected": "PUBLISH_BLOCKED",
+      "actual": "PUBLISH_BLOCKED",
+      "reason": "SOURCE_CHANGED_BEFORE_COPY",
+      "audience_writes": 0,
+      "invariant_violations": [],
+      "result": "PASS"
+    },
+    {
+      "case": "20 audience folder does not exist",
+      "expected": "PUBLISH_BLOCKED",
+      "actual": "PUBLISH_BLOCKED",
+      "reason": "DESTINATION_UNVERIFIED",
+      "audience_writes": 0,
+      "invariant_violations": [],
+      "result": "PASS"
+    },
+    {
+      "case": "21 file with the same name already published",
+      "expected": "PUBLISH_BLOCKED",
+      "actual": "PUBLISH_BLOCKED",
+      "reason": "DESTINATION_CONFLICT (overwrite=false)",
+      "audience_writes": 0,
+      "invariant_violations": [],
+      "result": "PASS"
+    },
+    {
+      "case": "22 copy approval denied (no fallback write)",
+      "expected": "PUBLISH_BLOCKED",
+      "actual": "PUBLISH_BLOCKED",
+      "reason": "COPY_NOT_COMPLETED (no save-text/echo fallback)",
+      "audience_writes": 0,
+      "invariant_violations": [],
+      "result": "PASS"
+    },
+    {
+      "case": "23 post-copy read-back differs",
+      "expected": "POSSIBLE_EXPOSURE",
+      "actual": "POSSIBLE_EXPOSURE",
+      "reason": "post-copy check failed; administrator must restrict the file",
+      "audience_writes": 1,
+      "invariant_violations": [],
+      "result": "PASS"
+    }
+  ]
+}

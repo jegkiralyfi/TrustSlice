@@ -1,0 +1,152 @@
+[
+  {
+    "atom_id": "REAL-001",
+    "source": "P041_offer.txt",
+    "category": "value",
+    "text": "Hathetes vezetőfejlesztési program, két helyszíni műhellyel, heti csapatreflexiós gyakorlattal és személyre szabott visszajelzési protokollal.",
+    "char_start": 214,
+    "char_end": 356,
+    "source_sha256": "c2e4890b3add373e7d2932c0c5e6f9bdd5533218777a721797ee2ce7612699db",
+    "classification": "OWNER_APPROVED_TEST_FIXTURE"
+  },
+  {
+    "atom_id": "REAL-002",
+    "source": "P041_offer.txt",
+    "category": "value",
+    "text": "A programot anonim elő- és utóméréssel, valamint 90 napos utánkövetési keretrendszerrel egészítjük ki.",
+    "char_start": 384,
+    "char_end": 486,
+    "source_sha256": "c2e4890b3add373e7d2932c0c5e6f9bdd5533218777a721797ee2ce7612699db",
+    "classification": "OWNER_APPROVED_TEST_FIXTURE"
+  },
+  {
+    "atom_id": "REAL-003",
+    "source": "P042_offer.txt",
+    "category": "value",
+    "text": "Négyhetes ügyfélút-feltérképezés 18 interjúval, három értékesítési folyamatműhellyel és egy priorizált beavatkozási térképpel.",
+    "char_start": 184,
+    "char_end": 310,
+    "source_sha256": "1e6eb92f9a965572151341bc33b0b28c2e21d0ba1886c2d46f73e64d6e8d8f86",
+    "classification": "OWNER_APPROVED_TEST_FIXTURE"
+  },
+  {
+    "atom_id": "REAL-004",
+    "source": "P042_offer.txt",
+    "category": "value",
+    "text": "A belső csapat 12 mérhető kísérletet kap a következő negyedévre.",
+    "char_start": 328,
+    "char_end": 392,
+    "source_sha256": "1e6eb92f9a965572151341bc33b0b28c2e21d0ba1886c2d46f73e64d6e8d8f86",
+    "classification": "OWNER_APPROVED_TEST_FIXTURE"
+  },
+  {
+    "atom_id": "REAL-005",
+    "source": "P043_offer_mixed.txt",
+    "category": "value",
+    "text": "Tízhetes változásvezetési labor, egyéni vezetői naplóval és kéthetente demonstrált csapatprototípussal.",
+    "char_start": 98,
+    "char_end": 201,
+    "source_sha256": "224b0434a3a48d895eaccdb56932691a123607a20572059855fa205a474b66ec",
+    "classification": "OWNER_APPROVED_TEST_FIXTURE"
+  },
+  {
+    "atom_id": "REAL-006",
+    "source": "P041_invoice.txt",
+    "category": "customer",
+    "text": "Mesevár Gyártómű Kft. (kitalált)",
+    "char_start": 78,
+    "char_end": 110,
+    "source_sha256": "084b45e2d21da398a714f49b1d19e31e9950c94d7d825432db799186a8e769c8",
+    "classification": "OWNER_APPROVED_TEST_FIXTURE"
+  },
+  {
+    "atom_id": "REAL-007",
+    "source": "P041_invoice.txt",
+    "category": "amount",
+    "text": "9 840 000 Ft + ÁFA.",
+    "char_start": 150,
+    "char_end": 169,
+    "source_sha256": "084b45e2d21da398a714f49b1d19e31e9950c94d7d825432db799186a8e769c8",
+    "classification": "OWNER_APPROVED_TEST_FIXTURE"
+  },
+  {
+    "atom_id": "REAL-008",
+    "source": "P041_invoice.txt",
+    "category": "payment",
+    "text": "2026-12-20.",
+    "char_start": 189,
+    "char_end": 200,
+    "source_sha256": "084b45e2d21da398a714f49b1d19e31e9950c94d7d825432db799186a8e769c8",
+    "classification": "OWNER_APPROVED_TEST_FIXTURE"
+  },
+  {
+    "atom_id": "REAL-009",
+    "source": "P042_invoice.txt",
+    "category": "customer",
+    "text": "Zöldsziget Kísérleti Zrt. (kitalált)",
+    "char_start": 78,
+    "char_end": 114,
+    "source_sha256": "3ddc8e79dd631422fbbd4b420d38c2d707936f2003504efaeb6bae9addfdbf66",
+    "classification": "OWNER_APPROVED_TEST_FIXTURE"
+  },
+  {
+    "atom_id": "REAL-010",
+    "source": "P042_invoice.txt",
+    "category": "amount",
+    "text": "6 270 000 Ft + ÁFA.",
+    "char_start": 154,
+    "char_end": 173,
+    "source_sha256": "3ddc8e79dd631422fbbd4b420d38c2d707936f2003504efaeb6bae9addfdbf66",
+    "classification": "OWNER_APPROVED_TEST_FIXTURE"
+  },
+  {
+    "atom_id": "REAL-011",
+    "source": "P042_invoice.txt",
+    "category": "payment",
+    "text": "2026-12-05.",
+    "char_start": 193,
+    "char_end": 204,
+    "source_sha256": "3ddc8e79dd631422fbbd4b420d38c2d707936f2003504efaeb6bae9addfdbf66",
+    "classification": "OWNER_APPROVED_TEST_FIXTURE"
+  },
+  {
+    "atom_id": "REAL-012",
+    "source": "P043_invoice.txt",
+    "category": "customer",
+    "text": "Hóharmat Szolgáltató Kft. (kitalált)",
+    "char_start": 78,
+    "char_end": 114,
+    "source_sha256": "b1fb04d804b3c8e941dbd34ead7cc76975ad66e7ecf3c24837a644ce905aa7b3",
+    "classification": "OWNER_APPROVED_TEST_FIXTURE"
+  },
+  {
+    "atom_id": "REAL-013",
+    "source": "P043_invoice.txt",
+    "category": "amount",
+    "text": "12 430 000 Ft + ÁFA.",
+    "char_start": 154,
+    "char_end": 174,
+    "source_sha256": "b1fb04d804b3c8e941dbd34ead7cc76975ad66e7ecf3c24837a644ce905aa7b3",
+    "classification": "OWNER_APPROVED_TEST_FIXTURE"
+  },
+  {
+    "atom_id": "REAL-014",
+    "source": "P043_invoice.txt",
+    "category": "payment",
+    "text": "2026-12-12.",
+    "char_start": 194,
+    "char_end": 205,
+    "source_sha256": "b1fb04d804b3c8e941dbd34ead7cc76975ad66e7ecf3c24837a644ce905aa7b3",
+    "classification": "OWNER_APPROVED_TEST_FIXTURE"
+  },
+  {
+    "atom_id": "REAL-015",
+    "source": "P042_coaching_notes.txt",
+    "category": "personal",
+    "text": "A vezető saját megítélése szerint tart a nyílt konfliktuskezeléstől.",
+    "char_start": 118,
+    "char_end": 186,
+    "source_sha256": "e3f52886ba930316167cad5d2671c187788a45c52a49a6c6d5149ca1d0eecff1",
+    "classification": "OWNER_APPROVED_TEST_FIXTURE"
+  }
+]

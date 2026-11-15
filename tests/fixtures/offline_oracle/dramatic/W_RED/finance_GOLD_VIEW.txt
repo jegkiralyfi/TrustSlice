@@ -1,0 +1,3 @@
+Customer: FIKTIV_NORTHLIGHT_LABS
+Amount: 18 740 125 Ft
+Terms: 11 nap
