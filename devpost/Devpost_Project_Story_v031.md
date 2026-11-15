@@ -76,9 +76,17 @@ The Skill bundles no third-party component, library or service. It uses UGREEN's
 
 ## What's next for TrustSlice – Team Views of Confidential Documents
 
-- **We will prove the workflow on a NAS.** We will define four views (for example Sales, Delivery, Finance and Auditor) and add a fifth without editing the Skill. We will measure owner review time, the number of approval prompts and how much useful text survives review.
-- **We will show fidelity.** We will present exact passages, source identifiers, the staged read-back and proof that forbidden values are absent, and we will record PDF and DOCX extraction results.
-- **We will test the access boundary.** We will use real NAS accounts, a forged "CFO approved" line inside a document and unauthorized questions, and we will show whether each refusal came from NAS permissions or only from the AI.
-- **We want fewer prompts.** We will check whether the platform approvals for one release can be batched.
-- **We plan more formats.** Spreadsheets and CSV files need cell and sheet provenance, slides need slide and speaker-note provenance, and databases need authenticated read-only connectors. Each format will get its own tests before we promise word-for-word accuracy.
-- **The platform could enforce it.** If UGREEN later lets a Skill confirm who the user is and filter search by permission before Uliya reads a file, the same approved files could become enforced access control. Continuous monitoring of information exposure would be a separate product; it is not part of this entry.
+**First, we will prove the workflow on a real NAS.**
+
+- We will define four views (for example Sales, Delivery, Finance and Auditor), add a fifth without editing the Skill, and measure owner review time, approval prompts and how much useful text survives review.
+- We will show exact passages, the staged read-back and proof that forbidden values are absent, and we will record PDF and DOCX extraction results.
+- We will test real NAS accounts, a forged "CFO approved" line inside a document and unauthorized questions. We will show whether each refusal came from NAS permissions or only from the AI.
+- We will check whether the platform approvals for one release can be batched.
+
+**Our vision goes beyond documents and beyond the office.** None of the following is part of this entry, and each step will need its own tests first.
+
+- **Tables can get views too.** The same owner-approved principle can work on spreadsheets, CSV files and other tables. For example, Sales could get the price list without the margin column, and Finance could get totals without client names. This needs cell, sheet and formula provenance and careful handling of hidden sheets.
+- **Slides can be shared slide by slide.** A team could receive the approved slides of a deck, while speaker notes stay private unless the owner approves them.
+- **Databases can feed views.** ERP and CRM records could flow into approved views through authenticated, read-only connectors with permission checks at query time.
+- **The same principle works at home.** Many NAS units serve families, not only firms. For example, a household could give its tax adviser only the income and deduction passages of its documents, or give a babysitter the emergency contacts and allergies from the household sheet without the alarm code or the bank details.
+- **The platform could enforce it.** If UGREEN lets a Skill confirm who the user is and filter search by permission before Uliya reads a file, approved views could become enforced access control across the NAS. Continuous monitoring of information exposure could follow as a separate product.
