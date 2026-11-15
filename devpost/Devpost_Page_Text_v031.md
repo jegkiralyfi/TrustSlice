@@ -9,13 +9,13 @@ Each team gets only what it needs and is allowed to know. The owner approves the
 ## Cover headline / tagline
 Share the know-how, not the whole document.
 
-## Image gallery (upload in this order; the text after each file name can serve as its caption)
-1. `01_Main.png`: Each team gets only what it needs and is allowed to know. The views shown are examples.
-2. `02_Views.png`: The table shows who sees which part of one contract. Sales, Delivery and Finance are examples, not a limit.
-3. `03_Flow.png`: Seven steps take a document from DEFINE to ASK, and the original is never edited.
-4. `04_Checks.png`: Nothing reaches a team folder before it is checked.
-5. `05_Compare.png`: The usual tools work on whole files; TrustSlice works per passage.
-6. `06_Status.png`: The image shows what we verified today and what the NAS tests will check next.
+## Image gallery (upload in this order; each caption is at most 140 characters)
+1. `01_Main.png`: Each team gets only what it needs and is allowed to know. The owner approves the parts once. Sales, Delivery and Finance are examples.
+2. `02_Views.png`: Folder permissions work per file, and TrustSlice works per passage. Sales, Delivery and Finance are examples, not a limit.
+3. `03_Flow.png`: Seven steps take a document from DEFINE to ASK. The original is never edited or copied to a team.
+4. `04_Checks.png`: Each file is checked in a private staging folder before any copy. Any failed check blocks the release.
+5. `05_Compare.png`: Search, summaries and redaction work on whole files. TrustSlice publishes only owner-approved passages, after checking them.
+6. `06_Status.png`: We verified the Skill, the simulator and the test data today. The NAS tests come next, and we claim no NAS result yet.
 
 ---
 
