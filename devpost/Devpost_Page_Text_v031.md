@@ -3,14 +3,14 @@
 ## Project name
 TrustSlice – Team Views of Confidential Documents
 
-## Elevator pitch (183 characters, limit 200)
-Each team sees only the parts of a document it needs. TrustSlice lets the owner approve those parts word for word, without sharing the confidential original. It runs on UGREEN AI NAS.
+## Elevator pitch (182 characters, limit 200)
+Each team gets only what it needs and is allowed to know. The owner approves the parts word for word, and TrustSlice never shares the confidential original. It runs on UGREEN AI NAS.
 
 ## Cover headline / tagline
 Share the know-how, not the whole document.
 
 ## Image gallery (upload in this order; the text after each file name can serve as its caption)
-1. `01_Main.png`: Each team sees only what it needs. The views shown are examples.
+1. `01_Main.png`: Each team gets only what it needs and is allowed to know. The views shown are examples.
 2. `02_Views.png`: The table shows who sees which part of one contract. Sales, Delivery and Finance are examples, not a limit.
 3. `03_Flow.png`: Seven steps take a document from DEFINE to ASK, and the original is never edited.
 4. `04_Checks.png`: Nothing reaches a team folder before it is checked.

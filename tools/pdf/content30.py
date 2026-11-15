@@ -2,7 +2,7 @@
 VERSION = "v0.31"
 TITLE = "TrustSlice – Team Views of Confidential Documents"
 HERO_PILL = "TRUSTSLICE"
-HERO_H1 = "EACH TEAM SEES ONLY WHAT IT NEEDS."
+HERO_H1 = ("EACH TEAM GETS ONLY WHAT IT NEEDS", "AND IS ALLOWED TO KNOW.")   # one sentence, two lines
 HERO_H2 = "SHARE THE KNOW-HOW, NOT THE WHOLE DOCUMENT."
 HERO_FLOW = "The original stays private  →  The owner approves parts  →  Each team gets its own file"
 HERO_SUB = "TrustSlice  |  Team Views of Confidential Documents  |  UGREEN AI NAS"

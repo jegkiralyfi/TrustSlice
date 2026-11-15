@@ -1,6 +1,6 @@
 # TrustSlice – Team Views of Confidential Documents · Round 1 Proposal (v0.31)
 
-**Each team sees only what it needs.** Share the know-how, not the whole document.
+**Each team gets only what it needs and is allowed to know.** Share the know-how, not the whole document.
 
 The original stays private → The owner approves parts → Each team gets its own file
 

@@ -64,7 +64,7 @@ BOARDS["Main"] = ("TrustSlice cover", "dark", f"""
 <div class="bar"></div>
 <div class="kick">UGREEN AI NAS HACKATHON 2026 · AUTOMATE YOUR WORKFLOW</div>
 <div style="margin-top:22px"><span class="pill">TRUSTSLICE</span></div>
-<div id="hero" style="font-family:Poppins,sans-serif;font-weight:700;font-size:52px;line-height:64px;margin-top:18px;white-space:nowrap">Each team sees only what it needs.</div>
+<div id="hero" style="font-family:Poppins,sans-serif;font-weight:700;font-size:48px;line-height:58px;margin-top:16px;white-space:nowrap">Each team gets only what it needs<br>and is allowed to know.</div>
 <div style="font-family:Poppins,sans-serif;font-weight:600;font-size:30px;line-height:40px;margin-top:4px">Share the know-how, <span style="color:{TEAL}">not the whole document.</span></div>
 <svg width="1200" height="800" viewBox="0 0 1200 800" style="position:absolute;left:0;top:0" aria-hidden="true">
   <polygon points="284,452 452,500 452,560 284,610" fill="#9FC4CC" fill-opacity="0.14"/>

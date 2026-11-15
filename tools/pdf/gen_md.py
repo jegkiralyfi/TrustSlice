@@ -17,7 +17,7 @@ def sentence_case(text):
 
 out = sys.argv[1] if len(sys.argv) > 1 else "PROPOSAL.md"
 L = [f"# {C.TITLE} · Round 1 Proposal ({C.VERSION})", "",
-     f"**{sentence_case(C.HERO_H1)}** {sentence_case(C.HERO_H2)}", "",
+     f"**{sentence_case(' '.join(C.HERO_H1))}** {sentence_case(C.HERO_H2)}", "",
      C.HERO_FLOW.replace("  ", " "), "",
      "| Example view | Sees | Held back |", "|---|---|---|"]
 for t, sees, held in C.CARDS:

@@ -65,13 +65,14 @@ def first_page(c, doc):
     c.roundRect(M, H - 52, 118, 22, 5, stroke=0, fill=1)
     c.setFillColor(NAVY); c.setFont("DVB", 9.5); c.drawString(M + 12, H - 44.5, C.HERO_PILL)
     from reportlab.pdfbase.pdfmetrics import stringWidth as sw
-    for txt, fn, fs in ((C.HERO_H1, "DVB", 21), (C.HERO_H2, "DVB", 13.5), (C.HERO_FLOW, "DV", 9.6),
+    for txt, fn, fs in ((C.HERO_H1[0], "DVB", 21), (C.HERO_H1[1], "DVB", 21), (C.HERO_H2, "DVB", 13.5), (C.HERO_FLOW, "DV", 9.6),
                         (C.HERO_SUB, "DV", 7.6), (C.CARDS_NOTE, "DVB", 6.6), (C.PAGE2_SUB, "DV", 7.8)):
         assert sw(txt, fn, fs) <= W - 2 * M, f"hero text too wide: {txt}"
-    c.setFillColor(white); c.setFont("DVB", 21); c.drawString(M, H - 90, C.HERO_H1)
-    c.setFillColor(MINT); c.setFont("DVB", 13.5); c.drawString(M, H - 116, C.HERO_H2)
-    c.setFillColor(HexColor("#DCE6EA")); c.setFont("DV", 9.6); c.drawString(M, H - 144, C.HERO_FLOW)
-    c.setFillColor(HexColor("#AFC0C7")); c.setFont("DV", 7.6); c.drawString(M, H - 170, C.HERO_SUB)
+    c.setFillColor(white); c.setFont("DVB", 21)
+    c.drawString(M, H - 84, C.HERO_H1[0]); c.drawString(M, H - 109, C.HERO_H1[1])
+    c.setFillColor(MINT); c.setFont("DVB", 13.5); c.drawString(M, H - 135, C.HERO_H2)
+    c.setFillColor(HexColor("#DCE6EA")); c.setFont("DV", 9.6); c.drawString(M, H - 160, C.HERO_FLOW)
+    c.setFillColor(HexColor("#AFC0C7")); c.setFont("DV", 7.6); c.drawString(M, H - 182, C.HERO_SUB)
     card_block(c)
     footer(c, 1)
     c.restoreState()
